@@ -1,0 +1,21 @@
+<html>
+
+<head>
+<title> LJMU Holiday Request System </title>
+<%= stylesheet_link_tag 'holiday_request' %>
+</head>
+
+<body>
+
+  <% if flash[:notice] %>
+    <div class="flash"><%= flash[:notice] %></div>
+  <% end %>
+ 
+  <div id="wrapper">
+ 
+  <%= yield %>
+ 
+  </div>
+ 
+</body>
+</html>

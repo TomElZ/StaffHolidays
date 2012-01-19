@@ -1,0 +1,12 @@
+<h1><%=h @holidayrequests.userid %></h1>
+<h1><%=h @holidayrequests.fullname %></h1>
+<h1><%=h @holidayrequests.dateto - @holidayrequests.datefrom %></h1>
+<h1><%=h @holidayrequests.datefrom %></h1>
+<h1><%=h @holidayrequests.dateto %></h1>
+
+<%= link_to 'Edit Holiday Request', edit_holidayrequest_path %> | <%=
+link_to 'Back', holidayrequests_path %>
+
+ | <%= link_to 'Delete this Request', @holidayrequests, :confirm => "Are
+you sure?", :method => :delete %>
+
