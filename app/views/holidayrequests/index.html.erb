@@ -9,7 +9,7 @@
 
 <body>
 <div id="container">
-  <div id="banner"><img src="images/banner design.gif" width="961" height="103" alt="banner"></div>
+  <div id="banner"><img src="http://localhost:3000/images/banner%20design.gif" width="961" height="103" alt="banner"></div>
     <div id="navigation"><d
 </div>
   <div id="social"><a href="http://www.facebook.com/liverpooljohnmooresuniversity" target="_blank"><img src="http://www.niftybuttons.com/classic/facebook.png" alt="facebook"></a><a href="http://twitter.com/#!/LJMU" target="_blank"><img src="http://www.niftybuttons.com/classic/twitter.png" alt="twitter"></a><a href="http://www.youtube.com/LJMUTV" target="_blank"><img src="http://www.niftybuttons.com/classic/youtube.png" alt="youtube"></a></div>
@@ -17,8 +17,16 @@
     <p class="socialfont">- For all of your LJMU social networking needs</p>
   </div>
   <div id="booking"><table id="staff">
+     <% if logged_in? %>
+    Welcome <%=h current_user.username %>! Not you?<br>
+     <%= link_to "Log out", logout_path %>
+   <% else %>
+     <%= link_to "Sign up", signup_path %> or
+     <%= link_to "log in", login_path %>.
+   <% end %>
+   
   <tr>
-    <th width="10%" height="35">User ID</th>
+    <th width="10%" height="35">Username</th>
     <th width="10%">Fullname</th>
       <% @holidayrequests.each do |holidayrequests| %>
   </tr>

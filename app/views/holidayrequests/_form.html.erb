@@ -1,7 +1,7 @@
 <div id = "holidayrequest_form">
   <% form_for @holidayrequests do |f| -%>
 <p> <%= f.label :userid, "Username:" %><br />
-  <%=f.text_field :userid%>
+  <%=f.text_field :userid, :value => current_user.username, :disabled => true %>
 </p>
 <p> <%=f.label :fullname, "Fullname:" %><br />
   <%= f.text_field :fullname %>

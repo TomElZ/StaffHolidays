@@ -18,6 +18,9 @@ class HolidayrequestsController < ApplicationController
   def edit
     login_required
     @holidayrequests = Holidayrequests.find(params[:id])
+    if current_user.id != @holidayrequests.user.id
+    redirect_to holidayrequests_path
+  end
   end
   
   def create  
