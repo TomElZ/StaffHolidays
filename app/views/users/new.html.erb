@@ -16,10 +16,28 @@
   <div id="socialtext">
     <p class="socialfont">- For all of your LJMU social networking needs</p>
   </div>
-<%= render :partial => 'form' %>
+<p>Already have an account? <%= link_to "Log in", login_path %>.</p>
 
-<p class = "editinp"><%= link_to "Cancel", holidayrequests_path %></p>
-
+<% form_for @user do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label :email, "Email Address" %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation, "Confirm Password" %><br />
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <p><%= f.submit "Sign up" %></p>
+<% end %>
 <div id="footer"><p>
     <a href="http://validator.w3.org/check?uri=referer"><img
       src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88"></a><a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"

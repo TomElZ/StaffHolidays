@@ -10,16 +10,42 @@
 <body>
 <div id="container">
   <div id="banner"><img src="images/banner design.gif" width="961" height="103" alt="banner"></div>
-  <div id="navigation">
+  <div id="navigation"><div id="tabsF">
+  <ul>
+    <li><a href="index.html" title="Home" accesskey = "i"><span>Home</span></a></li>
+    <li><a href="bookingindex.html.erb" title="Booking Index" accesskey = "b"><span>Booking Index</span></a></li>
+    <li><a href="show.html.erb" title="Show Request" accesskey = "s"><span>Show Request</span></a></li>
+    <li><a href="edit.html.erb" title="Edit Request" accesskey = "e"><span>Edit Request</span></a></li>
+    <li><a href="new.html.erb" title="New Request" accesskey = "n"><span>New Request</span></a></li>
+  </ul>
+</div>
 </div>
   <div id="social"><a href="http://www.facebook.com/liverpooljohnmooresuniversity" target="_blank"><img src="http://www.niftybuttons.com/classic/facebook.png" alt="facebook"></a><a href="http://twitter.com/#!/LJMU" target="_blank"><img src="http://www.niftybuttons.com/classic/twitter.png" alt="twitter"></a><a href="http://www.youtube.com/LJMUTV" target="_blank"><img src="http://www.niftybuttons.com/classic/youtube.png" alt="youtube"></a></div>
   <div id="socialtext">
     <p class="socialfont">- For all of your LJMU social networking needs</p>
   </div>
-<%= render :partial => 'form' %>
+<p>Already have an account? <%= link_to "Log in", login_path %>.</p>
 
-<p class = "editinp"><%= link_to "Cancel", holidayrequests_path %></p>
-
+<% form_for @user do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label :email, "Email Address" %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation, "Confirm Password" %><br />
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <p><%= f.submit "Sign up" %></p>
+<% end %>
 <div id="footer"><p>
     <a href="http://validator.w3.org/check?uri=referer"><img
       src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88"></a><a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"

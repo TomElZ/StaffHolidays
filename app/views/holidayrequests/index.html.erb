@@ -10,15 +10,7 @@
 <body>
 <div id="container">
   <div id="banner"><img src="images/banner design.gif" width="961" height="103" alt="banner"></div>
-  <div id="navigation"><div id="tabsF">
-  <ul>
-    <li><a href="index.html" title="Home" accesskey = "i"><span>Home</span></a></li>
-    <li><a href="bookingindex.html.erb" title="Booking Index" accesskey = "b"><span>Booking Index</span></a></li>
-    <li><a href="show.html.erb" title="Show Request" accesskey = "s"><span>Show Request</span></a></li>
-    <li><a href="edit.html.erb" title="Edit Request" accesskey = "e"><span>Edit Request</span></a></li>
-    <li><a href="new.html.erb" title="New Request" accesskey = "n"><span>New Request</span></a></li>
-  </ul>
-</div>
+    <div id="navigation"><d
 </div>
   <div id="social"><a href="http://www.facebook.com/liverpooljohnmooresuniversity" target="_blank"><img src="http://www.niftybuttons.com/classic/facebook.png" alt="facebook"></a><a href="http://twitter.com/#!/LJMU" target="_blank"><img src="http://www.niftybuttons.com/classic/twitter.png" alt="twitter"></a><a href="http://www.youtube.com/LJMUTV" target="_blank"><img src="http://www.niftybuttons.com/classic/youtube.png" alt="youtube"></a></div>
   <div id="socialtext">
@@ -35,7 +27,7 @@
     <td><%= holidayrequests.fullname %></td>
 <% end %>
 </table>
-<p><%= link_to "Create a new Holiday Request", new_holidayrequest_path %></p>
+<p class ="editinp"><%= link_to "Create a new Holiday Request", new_holidayrequest_path %> | <%= link_to "Logout", logout_path %></p>
 </div>
 <div id="footer"><p>
     <a href="http://validator.w3.org/check?uri=referer"><img
