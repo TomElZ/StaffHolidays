@@ -27,12 +27,12 @@
    
   <tr>
     <th width="10%" height="35">Username</th>
-    <th width="10%">Fullname</th>
+    <th width="10%">Authorised?</th>
       <% @holidayrequests.each do |holidayrequests| %>
   </tr>
   <tr>
-    <td><%= link_to holidayrequests.userid , holidayrequests %></td>
-    <td><%= holidayrequests.fullname %></td>
+    <td><%= link_to holidayrequests.user.username , holidayrequests %></td>
+    <td><%= holidayrequests.approved %></td>
 <% end %>
 </table>
 <% if current_user.admin != true %>

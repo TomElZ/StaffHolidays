@@ -31,8 +31,8 @@
       <% @holidayrequests.each do |holidayrequests| %>
   </tr>
   <tr>
-    <td><%= link_to holidayrequests.userid , holidayrequests %></td>
-    <td><%= holidayrequests.fullname %></td>
+    <td><%= link_to holidayrequests.user.username , holidayrequests %></td>
+    <td><%= holidayrequests.approved %></td>
 <% end %>
 </table>
 <% if current_user.admin != true %>

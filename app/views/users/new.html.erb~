@@ -16,7 +16,7 @@
   <div id="socialtext">
     <p class="socialfont">- For all of your LJMU social networking needs</p>
   </div>
-<p class = "normtext">Already have an account? <%= link_to "Log in", login_path %>.</p>
+<p class="normtext"> Already have an account? <%= link_to "Log in", login_path %>.</p>
 
 <% form_for @user do |f| %>
   <%= f.error_messages %>

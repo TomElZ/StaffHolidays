@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Booking Index</title>
+<title>Show Selected Holiday</title>
 <link href="styles/holiday_request.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -18,8 +18,6 @@
   </div>
   <div id = "main_2">
   <p class = "editinp">User ID: <%=h @holidayrequests.user.id %></p> 
-  <p class = "editinp">Username: <%=h @holidayrequests.userid %></p>
-  <p class = "editinp">Fullname: <%=h @holidayrequests.fullname %></p>
   <p class = "editinp">Number of Days: <%=h @holidayrequests.dateto - @holidayrequests.datefrom %></p>
   <p class = "editinp">Date From: <%=h @holidayrequests.datefrom %></p>
   <p class = "editinp">Date To: <%=h @holidayrequests.dateto %></p>

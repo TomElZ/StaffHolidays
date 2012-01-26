@@ -13,10 +13,11 @@
   <%=f.text_field :dateto%>
 </p>
 
-<if current_user.admin == true %>
+<% if current_user.admin == true %>
 <p class = "normtext"><%= f.label :approved, "Approved?:" %><br />
   <%=f.check_box :approved%>
 </p>
+<% end %>
 <p> <%= f.submit 'Save' %></p>
 <% end -%>
 

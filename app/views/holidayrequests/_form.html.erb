@@ -1,11 +1,5 @@
 <div id = "main_3">
   <% form_for @holidayrequests do |f| -%>
-<p class = "normtext"> <%= f.label :userid, "Username:" %><br />
-  <%=f.text_field :userid, :value => current_user.username%>
-</p>
-<p class = "normtext"><%=f.label :fullname, "Fullname:" %><br />
-  <%= f.text_field :fullname %>
-</p>
 <p class = "normtext"><%= f.label :datefrom, "Date From:" %><br />
   <%=f.text_field :datefrom%>
 </p>
