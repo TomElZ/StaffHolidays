@@ -18,8 +18,9 @@ class HolidayrequestsController < ApplicationController
   def edit
     login_required
     @holidayrequests = Holidayrequests.find(params[:id])
-    if current_user.id != @holidayrequests.user.id
+    if current_user.id != @holidayrequests.user.id || if current_user.admin == false
     redirect_to holidayrequests_path
+  end
   end
   end
   
@@ -48,8 +49,6 @@ class HolidayrequestsController < ApplicationController
     @holidayrequests = Holidayrequests.find(params[:id])
     @holidayrequests.destroy
     redirect_to :action => "index"
-end
-
-
-
-end
+  end
+  
+ end

@@ -10,7 +10,7 @@
 <body>
 <div id="container">
   <div id="banner"><img src="http://localhost:3000/images/banner%20design.gif" width="961" height="103" alt="banner"></div>
-    <div id="navigation"><d
+    <div id="navigation">
 </div>
   <div id="social"><a href="http://www.facebook.com/liverpooljohnmooresuniversity" target="_blank"><img src="http://www.niftybuttons.com/classic/facebook.png" alt="facebook"></a><a href="http://twitter.com/#!/LJMU" target="_blank"><img src="http://www.niftybuttons.com/classic/twitter.png" alt="twitter"></a><a href="http://www.youtube.com/LJMUTV" target="_blank"><img src="http://www.niftybuttons.com/classic/youtube.png" alt="youtube"></a></div>
   <div id="socialtext">
@@ -35,7 +35,9 @@
     <td><%= holidayrequests.fullname %></td>
 <% end %>
 </table>
-<p class ="editinp"><%= link_to "Create a new Holiday Request", new_holidayrequest_path %> | <%= link_to "Logout", logout_path %></p>
+<% if current_user.admin != true %>
+<p class ="editinp"><%= link_to "Create a new Holiday Request", new_holidayrequest_path %></p>
+<% end %>
 </div>
 <div id="footer"><p>
     <a href="http://validator.w3.org/check?uri=referer"><img

@@ -91,6 +91,20 @@
 		width: 820px;
 		border: 1px solid #D3C8A3;
 	  	}
+	 #main_2 {
+	 	margin-top: 25px;
+		float: left;
+		width: 968px;
+		border: 1px solid #D3C8A3;
+		}
+	 #main_3 {
+	 	margin-top: 25px;
+		float: left;
+		width: 660px;
+		border: 1px solid #D3C8A3;
+		padding-left: 300px;
+		}
+	 
 	#email {
 	  	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	  	font-size: 14px;
@@ -146,11 +160,7 @@
 	  margin-right: 300px;
 	  padding-top: 100px;
 	}
-	/* Font classes used */	
-	.button {
-		  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	  	font-size: 24px;
-	  	}	  
+	/* Font classes used */	  
 	.socialfont {
 	  	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	  	font-size: 24px;
@@ -170,6 +180,10 @@
 		font-size: 14px;
 		text-align: center;
 	  	}
+	.normtext {
+		font-family: Tahoma, Geneva, sans-serif;
+		font-size: 14px;
+		}
 	.copyright {
 		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 		font-size: 12px;
@@ -180,10 +194,9 @@
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	  font-size: 20px;
 	  color: #010;
-	  }
-	 .centre {
-	    margin-left: auto;
-	    margin-right: auto;
+	  text-align: center;
+	  margin-bottom: 15px;
+	  margin-top: 15px;
 	  }
 	h1 {
 		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;

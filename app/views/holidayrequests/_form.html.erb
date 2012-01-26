@@ -1,18 +1,26 @@
-<div id = "holidayrequest_form">
+<div id = "main_3">
   <% form_for @holidayrequests do |f| -%>
-<p> <%= f.label :userid, "Username:" %><br />
-  <%=f.text_field :userid, :value => current_user.username, :disabled => true %>
+<p class = "normtext"> <%= f.label :userid, "Username:" %><br />
+  <%=f.text_field :userid, :value => current_user.username%>
 </p>
-<p> <%=f.label :fullname, "Fullname:" %><br />
+<p class = "normtext"><%=f.label :fullname, "Fullname:" %><br />
   <%= f.text_field :fullname %>
 </p>
-<p> <%= f.label :datefrom, "Date From:" %><br />
+<p class = "normtext"><%= f.label :datefrom, "Date From:" %><br />
   <%=f.text_field :datefrom%>
 </p>
-<p> <%= f.label :dateto, "Date To:" %><br />
+<p class = "normtext"><%= f.label :dateto, "Date To:" %><br />
   <%=f.text_field :dateto%>
 </p>
+
+<% if current_user.admin == true %>
+<p class = "normtext"><%= f.label :approved, "Approved?:" %><br />
+  <%=f.check_box :approved%>
+</p>
+<% end %>
 <p> <%= f.submit 'Save' %></p>
 <% end -%>
+
+<%= link_to "Cancel", holidayrequests_path %></p>
 
 </div>

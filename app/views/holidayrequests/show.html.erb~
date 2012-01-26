@@ -9,26 +9,31 @@
 
 <body>
 <div id="container">
-  <div id="banner"><img src="images/banner_design.gif" width="961" height="103" alt="banner"></div>
+  <div id="banner"><img src="http://localhost:3000/images/banner%20design.gif" width="961" height="103" alt="banner"></div>
   <div id="navigation">
 </div>
   <div id="social"><a href="http://www.facebook.com/liverpooljohnmooresuniversity" target="_blank"><img src="http://www.niftybuttons.com/classic/facebook.png" alt="facebook"></a><a href="http://twitter.com/#!/LJMU" target="_blank"><img src="http://www.niftybuttons.com/classic/twitter.png" alt="twitter"></a><a href="http://www.youtube.com/LJMUTV" target="_blank"><img src="http://www.niftybuttons.com/classic/youtube.png" alt="youtube"></a></div>
   <div id="socialtext">
     <p class="socialfont">- For all of your LJMU social networking needs</p>
   </div>
-<h1>User ID: <%=h @holidayrequests.user.id %></h1> 
-<h1>Username: <%=h @holidayrequests.userid %></h1>
-<h1>Fullname: <%=h @holidayrequests.fullname %></h1>
-<h1>Number of Days: <%=h @holidayrequests.dateto - @holidayrequests.datefrom %></h1>
-<h1>Date From: <%=h @holidayrequests.datefrom %></h1>
-<h1>Date To: <%=h @holidayrequests.dateto %></h1>
+  <div id = "main_2">
+  <p class = "editinp">User ID: <%=h @holidayrequests.user.id %></p> 
+  <p class = "editinp">Username: <%=h @holidayrequests.userid %></p>
+  <p class = "editinp">Fullname: <%=h @holidayrequests.fullname %></p>
+  <p class = "editinp">Number of Days: <%=h @holidayrequests.dateto - @holidayrequests.datefrom %></p>
+  <p class = "editinp">Date From: <%=h @holidayrequests.datefrom %></p>
+  <p class = "editinp">Date To: <%=h @holidayrequests.dateto %></p>
+  <p class = "editinp">Approved?: <%=h @holidayrequests.approved %></p>
 
-<% if current_user.id == @holidayrequests.user.id %>
+<% if current_user.id == @holidayrequests.user.id || current_user.admin %>
 <p class = "editinp"><%= link_to 'Edit Holiday Request', edit_holidayrequest_path %> |
 <%= link_to 'Delete this Request', @holidayrequests, :confirm => "Are you sure?", :method => :delete %></p>
 <% end %>
+<% if current_user.admin != 
 
 <p class = "editinp"><%=link_to 'Back', holidayrequests_path %></p>
+
+  </div>
 
 <div id="footer"><p>
     <a href="http://validator.w3.org/check?uri=referer"><img
