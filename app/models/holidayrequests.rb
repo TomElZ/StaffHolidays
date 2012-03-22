@@ -5,5 +5,4 @@ class Holidayrequests < ActiveRecord::Base
   validates_presence_of :datefrom
   validates_presence_of :dateto
   
-  
 end

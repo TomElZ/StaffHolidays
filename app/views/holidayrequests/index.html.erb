@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Booking Index</title>
-<link href="styles/holiday_request.css" rel="stylesheet" type="text/css">
+<link href="stylesheets/holiday_request.css" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -16,18 +16,20 @@
   <div id="socialtext">
     <p class="socialfont">- For all of your LJMU social networking needs</p>
   </div>
-  <div id="booking"><table id="staff">
-     <% if logged_in? %>
+  <div id="booking">
+       <% if logged_in? %>
     Welcome <%=h current_user.username %>! Not you?<br>
      <%= link_to "Log out", logout_path %>
    <% else %>
      <%= link_to "Sign up", signup_path %> or
      <%= link_to "log in", login_path %>.
    <% end %>
-   
-  <tr>
+   <br>
+   <br>
+  <div class="apple_pagination"><%= will_paginate @holidayrequests %></div>  
+  <div id="booking"><table id="staff">
     <th width="10%" height="35">Username</th>
-    <th width="10%">Authorised?</th>
+    <th width="10%">Approved?</th>
       <% @holidayrequests.each do |holidayrequests| %>
   </tr>
   <tr>

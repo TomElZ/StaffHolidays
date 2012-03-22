@@ -1,9 +1,9 @@
 <div id = "main_3">
   <% form_for @holidayrequests do |f| -%>
-<p class = "normtext"><%= f.label :datefrom, "Date From:" %><br />
+<p class = "normtext"><%= f.label :datefrom, "Date From (YYYY/MM/DD):" %><br />
   <%=f.text_field :datefrom%>
 </p>
-<p class = "normtext"><%= f.label :dateto, "Date To:" %><br />
+<p class = "normtext"><%= f.label :dateto, "Date To (YYYY/MM/DD):" %><br />
   <%=f.text_field :dateto%>
 </p>
 

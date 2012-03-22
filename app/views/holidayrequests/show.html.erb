@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Show Selected Holiday</title>
-<link href="styles/holiday_request.css" rel="stylesheet" type="text/css">
+<link href="stylesheets/holiday_request.css" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -17,7 +17,6 @@
     <p class="socialfont">- For all of your LJMU social networking needs</p>
   </div>
   <div id = "main_2">
-  <p class = "editinp">User ID: <%=h @holidayrequests.user.id %></p> 
   <p class = "editinp">Number of Days: <%=h @holidayrequests.dateto - @holidayrequests.datefrom %></p>
   <p class = "editinp">Date From: <%=h @holidayrequests.datefrom %></p>
   <p class = "editinp">Date To: <%=h @holidayrequests.dateto %></p>
